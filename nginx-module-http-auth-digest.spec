@@ -27,14 +27,14 @@ Epoch: %{epoch}
 %endif
 %endif
 
-%define main_version 1.12.2
+%define main_version 1.14.0
 %define main_release 1%{?dist}.ngx
 
 %define bdir %{_builddir}/%{name}-%{main_version}
 
 Summary: nginx http-auth-digest dynamic module
 Name: nginx-module-http-auth-digest
-Version: 1.12.2
+Version: %{main_version}
 Release: 1%{?dist}.ngx
 Vendor: Nginx, Inc.
 URL: http://nginx.org/
@@ -133,6 +133,9 @@ BANNER
 fi
 
 %changelog
+* Mon May 07 2018 Shigechika AIKAWA
+- sync w/ nginx-1.14.0.
+
 * Mon Oct 30 2017 Shigechika AIKAWA
 - base on nginx-1.12.2
 - referenced nginx module spec files.
