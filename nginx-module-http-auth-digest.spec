@@ -27,7 +27,7 @@ Epoch: %{epoch}
 %endif
 %endif
 
-%define main_version 1.14.0
+%define main_version 1.14.1
 %define main_release 1%{?dist}.ngx
 
 %define bdir %{_builddir}/%{name}-%{main_version}
@@ -41,8 +41,6 @@ URL: http://nginx.org/
 Group: %{_group}
 
 Source0: http://nginx.org/download/nginx-%{main_version}.tar.gz
-
-
 
 License: 2-clause BSD-like license
 
@@ -58,7 +56,6 @@ Nginx Digest Authentication module
 %debug_package
 %endif
 
-
 %define WITH_CC_OPT $(echo %{optflags} $(pcre-config --cflags))
 %define WITH_LD_OPT -Wl,-z,relro -Wl,-z,now
 
@@ -69,8 +66,6 @@ Nginx Digest Authentication module
 %setup -qcTn %{name}-%{main_version}
 tar --strip-components=1 -zxf %{SOURCE0}
 git clone https://github.com/samizdatco/nginx-http-auth-digest.git
-
-
 
 %build
 
@@ -133,6 +128,9 @@ BANNER
 fi
 
 %changelog
+* Wed Nov 07 2018 Shigechika AIKAWA
+- sync w/ nginx-1.14.1.
+
 * Mon May 07 2018 Shigechika AIKAWA
 - sync w/ nginx-1.14.0.
 
