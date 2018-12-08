@@ -27,7 +27,7 @@ Epoch: %{epoch}
 %endif
 %endif
 
-%define main_version 1.14.1
+%define main_version 1.14.2
 %define main_release 1%{?dist}.ngx
 
 %define bdir %{_builddir}/%{name}-%{main_version}
@@ -128,6 +128,9 @@ BANNER
 fi
 
 %changelog
+* Wed Dec 05 2018 Shigechika AIKAWA
+- sync w/ nginx-1.14.2.
+
 * Wed Nov 07 2018 Shigechika AIKAWA
 - sync w/ nginx-1.14.1.
 
